@@ -1,0 +1,27 @@
+PYQ Capture 1.3 - verified 23 November 2026
+
+Published Google Sheets support:
+- Tested the exact published docs.google.com link supplied in chat.
+- Auto-detected the same-origin embedded sheet frame and its scrolling grid.
+- Captured the complete 3,394 x 12,140-pixel sheet in 15 full-width strips.
+- Compared with an independently expanded full-grid screenshot. Mean RGB
+  channel differences were below 0.001/255, with complete width and height.
+- An independent 2,380 x 2,281 embedded-table fixture matched pixel for pixel.
+- Both original horizontal and vertical scroll positions were restored.
+- Tested single tall PDF export and A4 export of the full-width live sheet.
+- A4 produced 3 pages, retained all source rows, and found clear breaks on
+  every page without fallback cuts.
+- No extension-page errors in the spreadsheet integration tests. Google's
+  own DOCS_timing page warnings were kept separate from extension errors.
+
+Regression:
+- 120-question normal-page fast capture, saved history, scroll/style
+  restoration, PNG/JPEG exports, A4/tall PDF exports, and gap-aware pagination.
+- JavaScript module syntax and manifest/resource validation.
+
+Tests used isolated Chromium-based profiles. Test copies had temporary
+host access to emulate a real toolbar click. The delivered extension has
+no host_permissions and does not request new permissions for this feature.
+Editable/private Google Sheets, arbitrary cross-origin frames, and automatic
+capture of every worksheet tab are outside this mode. It captures the active
+published worksheet; choose another worksheet tab and capture it separately.

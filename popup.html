@@ -1,0 +1,9 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><title>PYQ Capture</title><link rel="stylesheet" href="style.css"></head><body class="popup">
+<header><span class="logo">▤</span><div><h1>PYQ Capture</h1><p>Every question. One capture.</p></div></header>
+<p class="intro">Save long question banks, solutions, and revision notes.</p>
+<label for="mode">Capture area</label><select id="mode"><option value="auto">Auto-detect page or scrolling panel</option><option value="sheet">Google Sheets · published sheet, all columns</option><option value="page">Entire webpage</option><option value="selector">Specific scrolling panel</option><option value="visible">Visible area only</option></select>
+<div id="selectorWrap" hidden><label for="selector">Panel CSS selector</label><input id="selector" placeholder="e.g. main .overflow-y-auto"></div>
+<label for="delay">Capture speed</label><select id="delay"><option value="250" selected>Fast · already-loaded questions</option><option value="900">Balanced · some lazy-loaded content</option><option value="1800">Careful · questions loading slowly</option><option value="3000">Slow connection · extra loading time</option></select><small>Fast keeps full image quality. Use a slower setting if content appears late.</small>
+<label class="check"><input id="hide" type="checkbox" checked> Hide repeating fixed / sticky bars</label>
+<button id="capture" class="primary wide">Capture full page ↗</button><button id="stop" class="wide" hidden>Stop & keep captured sections</button><button id="saved" class="wide">Open saved captures</button>
+<p id="status" role="status"></p><div class="note">Keep the source tab selected. Open all questions and explanations first. Capture does not click quiz answers or “Next”.</div><footer>Local only · No account · No uploads</footer><script src="popup.js" type="module"></script></body></html>
