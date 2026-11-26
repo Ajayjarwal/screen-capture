@@ -1,6 +1,6 @@
-# PYQ Capture
+# Screen Capture
 
-A Chrome extension for capturing long question pages and published Google Sheets. Current version: **1.3.0**.
+A Chrome extension for capturing long pages and published Google Sheets. Current version: **1.3.0**.
 
 ## Features
 
